@@ -21,6 +21,13 @@ var ieItem = {
     acceptName: ['ie','iexplore']
 };
 
+var edgeItem = {
+    detail: "UWP browser for Windows 10",
+    label: "Microsoft Edge",
+    standardName: "start microsoft-edge:",
+    acceptName: ['edge']
+};
+
 var safariItem = {
     detail: "This only works on Mac OS",
     label: "Apple Safari",
@@ -40,7 +47,8 @@ var config =  {
 };
 
 if ( process.platform == 'win32' ) {
-    config.acceptBrowsers.push( ieItem );
+    config.acceptBrowsers.push( ieItem );    
+    config.acceptBrowsers.push( edgeItem );
 } else if ( process.platform == 'darwin' ) {
     config.acceptBrowsers.push( safariItem );
 }
